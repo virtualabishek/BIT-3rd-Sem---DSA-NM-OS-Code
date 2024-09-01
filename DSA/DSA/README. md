@@ -1,0 +1,92 @@
+# Ill-Conditioned System of Linear Equations
+
+## Problem Statement
+
+Given the system of linear equations:
+\[
+3x + 1.5y = 1 \quad \text{(Equation 1)}
+\]
+\[
+2x + 1.02y = 2 \quad \text{(Equation 2)}
+\]
+
+Determine whether the system is ill-conditioned by changing the coefficient 1.02 in Equation 2 to 1.03 and analyzing the impact on the solution.
+
+## Solution Approach
+
+### Step 1: Solve the Original System
+
+We first solve the system as it is:
+
+1. Multiply Equation 1 by 2 to eliminate x:
+\[
+   6x + 3y = 2 \quad \text{(Equation 3)}
+\]
+   
+2. Multiply Equation 2 by 3 to eliminate y:
+\[
+   6x + 3.06y = 6 \quad \text{(Equation 4)}
+\]
+   
+3. Subtract Equation 3 from Equation 4 to find y:
+\[
+   0.06y = 4
+\]
+\[
+   y = \frac{4}{0.06} = 66.67
+\]
+   
+4. Substitute y = 66.67 into Equation 1 to find x:
+\[
+   3x + 100 = 1
+\]
+\[
+   x = \frac{-99}{3} = -33
+\]
+
+The solution to the original system is x = -33, y = 66.67.
+
+### Step 2: Solve the Modified System
+
+Next, we change the coefficient in Equation 2 from 1.02 to 1.03 and solve the modified system:
+
+1. Replace Equation 2 with:
+\[
+   2x + 1.03y = 2 \quad \text{(Equation 5)}
+\]
+   
+2. Multiply Equation 5 by 3:
+\[
+   6x + 3.09y = 6 \quad \text{(Equation 6)}
+\]
+   
+3. Subtract Equation 3 from Equation 6 to find y:
+\[
+   0.09y = 4
+\]
+\[
+   y = \frac{4}{0.09} \approx 44.44
+\]
+   
+4. Substitute y = 44.44 into Equation 1 to find x:
+\[
+   3x + 66.66 = 1
+\]
+\[
+   x = \frac{-65.66}{3} \approx -21.89
+\]
+
+The solution to the modified system is x \approx -21.89, y \approx 44.44.
+
+### Step 3: Determine if the System is Ill-Conditioned
+
+An ill-conditioned system is characterized by a small change in coefficients causing a large change in the solution. In this case:
+
+- The original solution was x = -33, y = 66.67.
+- The modified solution is x \approx -21.89, y \approx 44.44.
+
+Given the significant difference in solutions due to the small change from 1.02 to 1.03, the system is **ill-conditioned**.
+
+## Conclusion
+
+The given system of equations is ill-conditioned, as a minor change in the coefficient leads to a significant variation in the solutions for x and y.
